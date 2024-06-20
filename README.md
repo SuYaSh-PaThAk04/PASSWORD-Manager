@@ -1,6 +1,3 @@
-
-Sure, here's a sample README file for your password manager application created using HTML, CSS, and JavaScript:
-
 Password Manager
 A simple and secure password manager built using HTML, CSS, and JavaScript.
 
