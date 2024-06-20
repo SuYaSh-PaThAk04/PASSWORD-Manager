@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            /* Apply the background animation to the body */
+            animation: color-change-4x 20s linear infinite alternate both;
+            overflow-x: hidden; /* Prevent horizontal overflow due to large animations */
+        }
+
+.header {
+    background-color: blueviolet;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.main {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    max-width: 90vw;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+}
+
+button.btn {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button.btn:hover {
+    background: darkviolet;
+    transform: scale(1.1);
+}
+
+img {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+#alert {
+    display: none;
+    background: green;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    animation: fadeInOut 4s ease-in-out forwards;
+}
+form{
+    margin-left: 800px;
+    size: 1000px;
+}
+@keyframes color-change-4x {
+    0% {
+        background-color: rgb(251, 130, 215);
+    }
+    15% {
+        background-color: rgb(255, 93, 93);
+    }
+    30% {
+        background-color: rgb(140, 255, 140);
+    }
+    45% {
+        background-color: rgb(255, 255, 132);
+    }
+    60% {
+        background-color: rgb(154, 154, 255);
+    }
+    75%{
+      background-color: rgb(248, 205, 97);
+    }
+    90%{
+        background-color: rgb(250, 138, 138);
+    }
+    100%{
+        background-color: rgb(196, 131, 246);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navigation-bar">
+            <nav>
+                <ul>
+                    <li><button>HOME</button></li>
+                    <li><button>PROFILE</button></li>
+                    <li><button>INFO</button></li>
+                    <li><button>SETTINGS</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main"> 
+        <h1>Password Manager</h1>
+        <p>Welcome to [Your Website Name], where your digital security is our top priority. Safeguard your passwords effortlessly and enjoy peace of mind knowing your data is protected with the highest standards of encryption and privacy.</p>
+        <h2>YOUR PASSWORDS</h2>
+        <div class="container">
+            <table>
+                <tr>
+                    <td>S.NO</td>
+                    <td>WEBSITE NAME</td>
+                    <td>USERNAME</td>
+                    <td>PASSWORD</td>
+                    <td>ACTION</td>
+                </tr>
+            </table>
+            <span id="alert">Copied to clipboard</span>
+            <h1>ADD A PASSWORD</h1>
+        </div>
+    </div>
+    <div class="footer">
+        <form id="passwordForm">
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+            <br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br><br>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="newfile.js"></script>
+</body>
+</html>
